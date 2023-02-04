@@ -45,8 +45,9 @@ public class Game {
         boolean flag = false;
         while(playersQueue.size()!=1){
             Player currentPlayer = playersQueue.remove();
-            System.out.println(currentPlayer.getPlayerName()+"'s turn: 0 - Roll Dice || Any other key - End Game ==> ");
+            System.out.println(currentPlayer.getPlayerName()+"'s turn: 0 - Roll Dice | 1- Leave Game | Any other key - End Game ==> ");
             String entry = in.next();
+            if(entry.equals("1")) continue;
             if(!entry.equals("0")){
                 flag=true;
                 break;
